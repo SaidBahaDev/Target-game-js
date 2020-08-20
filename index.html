@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trouver le Jocker</title>
+    <style>#nvJeux{
+        display:none;
+    }
+    .btn {
+			background-color: #4c78af;
+			border: none;
+			color: white;
+			padding: 6px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+        form {
+            display: inline-block;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        </style>
+</head>
+<body>
+    <form name=form1>
+        <label for="nom">Nom :</label>
+        <input name="nom" type="text">
+        <label for="nom">Nombre de ligne :</label>
+        <select name="nbLignes">
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10" selected>10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select>
+        <label for="nom">Nombre de collones :</label>
+        <select name="nbCollonnes">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected>10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+        <input class="btn" type="button" name ="envoi" value="Jouer">      
+    </form>
+    <!-- <input class="btn" type="button" id ="nvJeux" value="Nouvaux jeux">  -->
+    <div class="btn" id ="nvJeux"><a href="./index.html">Nouvaux jeux</a></div>
+    <div class="btn" ><a href="./statistiques.html">Statistiques</a></div>
+
+    <!-- <form action="./statistiques.html">
+        <input class="btn" type="submit" value="Statistiques" />
+    </form> -->
+
+    <div id="timer"></div>
+    <div id="clicks"></div>
+    
+</body>
+<script src="js/jeux.js"></script>
+<script src="js/rectangle.js"></script>
+<script> src="js/statistiques.js"</script>
+<script>
+form1.envoi.addEventListener("click", monFonction);
+function monFonction(){
+    var game = new Jeux(form1.nom,form1.nbLignes.value,form1.nbCollonnes.value);
+}
+
+</script>
+</html>

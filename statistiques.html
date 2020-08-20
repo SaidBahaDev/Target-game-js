@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+	<title>statistiques</title>
+	<style>
+		h1,h2,a{
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		}
+		h2{text-align: center;}
+		#tabstatistique {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		}
+
+		#tabstatistique td, #tabstatistique th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		text-align: center !important;
+		}
+
+		#tabstatistique tr:nth-child(even){background-color: #f2f2f2;}
+
+		#tabstatistique tr:hover {background-color: #ddd;}
+
+		#tabstatistique th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: left;
+		background-color: #4c78af;
+		color: white;
+		}
+		h1,a{text-align: center;}
+		#btn {
+			background-color: #4c78af;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 5px;
+			margin-bottom: 40px;
+		}
+
+		div#btnDiv {
+			margin: auto;
+    		width: 205px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Statistiques</h1>
+	<div id="btnDiv"><a id="btn" href="./index.html"><< Revenir au jeux</a></div>
+	<section id="result"></section>
+</body>
+<script src="./js/statistiques.js"></script>
+</html>
